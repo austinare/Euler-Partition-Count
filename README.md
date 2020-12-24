@@ -6,8 +6,11 @@ Example: 5 can be broken into the following partitions
 1 + 1 + 1 + 1 + 1 = 5
 
 1 + 2 + 2 = 5
+
 1 + 1 + 3 = 5
+
 1 + 4 = 5
+
 5
 
 for a total of 5 partitions (it is a formality to count the solo number as a partition).
