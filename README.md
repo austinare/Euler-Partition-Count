@@ -2,7 +2,9 @@
 A function that counts how many times a number can be broken into whole integers.
 
 Example: 5 can be broken into the following partitions
+
 1 + 1 + 1 + 1 + 1 = 5
+
 1 + 2 + 2 = 5
 1 + 1 + 3 = 5
 1 + 4 = 5
