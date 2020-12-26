@@ -61,14 +61,13 @@ def alternate_sign(vec):
     return vec
 
 def partition_count(n):
-    if n == 0:
-        return 1
+    n += 1 
 
     # initialize vectors
-    a = sub_pattern(n+2)
+    a = sub_pattern(n)
     b = operate_position(a)
     c = sign_pattern(b)
-    sign_vec = alternate_sign(c)
+    sign_vec = np.flip(alternate_sign(c))
 
     # create a vector to store the solution, initialize with formality p(0) = 1
     soln = np.zeros(n)
@@ -76,13 +75,10 @@ def partition_count(n):
 
     # do the partition algorithm
     for i in range(1,n):
-        current_sign = sign_vec[0:i]
-        current_soln = soln[0:i]
-        soln[i] = sum( current_sign * current_soln )
-        print(current_sign)
+        soln[i] = sign_vec[n-i:n].dot(soln[0:i])
 
-    return soln
+    return int(soln[n-1])
         
 
-test = partition_count(7)
+test = partition_count(666)
 print(test)
