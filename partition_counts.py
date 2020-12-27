@@ -78,7 +78,6 @@ def partition_count(n):
         soln[i] = sign_vec[n-i:n].dot(soln[0:i])
 
     return int(soln[n-1])
-        
 
-test = partition_count(666)
-print(test)
+a = partition_count(10)
+print(a)
